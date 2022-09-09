@@ -1,0 +1,34 @@
+{
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["airbnb-base", "prettier", "plugin:mocha/recommended"],
+  "plugins": ["prettier", "mocha"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "describe": true,
+    "it": true,
+    "after": true,
+    "before": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "import/no-unresolved": [
+      "error",
+      {
+        "commonjs": true,
+        "amd": true,
+        "caseSensitive": true,
+        "ignore": ["@"]
+      }
+    ],
+    "prettier/prettier": "error",
+    "mocha/no-mocha-arrows": "off",
+    "import/prefer-default-export": "off"
+  }
+}
